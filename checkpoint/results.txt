@@ -1,0 +1,153 @@
+Namespace(project='ours', dataset='mini_imagenet', dataroot='/data16t', epochs_base=120, epochs_new=10, lr_base=0.1, lr_new=0.1, lrw=0.1, lrb=0.1, schedule='Milestone', milestones=[40, 70, 100], step=40, decay=0.0005, momentum=0.9, gamma=0.1, temperature=16, not_data_init=False, batch_size_base=64, batch_size_new=0, test_batch_size=100, base_mode='ViT-B/16', new_mode='avg_cos', start_session=0, start_epoch=0, clip_model_path='pretrain/clip/mini_imageNet.pth', model_dir=None, set_no_val=False, gpu='0', num_workers=8, seed=1, debug=False, incft=False, num_gpu=1, base_class=60, num_classes=100, way=5, shot=5, sessions=9, Dataset=<module 'dataloader.miniimagenet.miniimagenet' from '/home/hlf/cjj2/dataloader/miniimagenet/miniimagenet.py'>, save_path='checkpoint/mini_imagenet/ours/distill-clip-RN18-cos-avg_cos-data_init-start_0/', tfm_train=Compose(
+    RandomResizedCrop(size=(224, 224), scale=(0.08, 1.0), ratio=(0.75, 1.3333), interpolation=bicubic)
+    RandomHorizontalFlip(p=0.5)
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+), tfm_test=Compose(
+    Resize(size=224, interpolation=bicubic, max_size=None, antialias=None)
+    CenterCrop(size=(224, 224))
+    ToTensor()
+    Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+))
+epoch:000,lr:0.1000,training_loss:3.61088, training_acc:0.00000,test_loss:3.57157,test_acc:0.12017
+epoch:001,lr:0.1000,training_loss:2.96730, training_acc:0.00000,test_loss:3.48270,test_acc:0.14800
+epoch:002,lr:0.1000,training_loss:2.59660, training_acc:0.00000,test_loss:2.81376,test_acc:0.26933
+epoch:003,lr:0.1000,training_loss:2.34277, training_acc:0.00000,test_loss:2.73781,test_acc:0.29450
+epoch:004,lr:0.1000,training_loss:2.15827, training_acc:0.00000,test_loss:2.50343,test_acc:0.34717
+epoch:005,lr:0.1000,training_loss:1.97838, training_acc:0.00000,test_loss:2.43888,test_acc:0.35717
+epoch:006,lr:0.1000,training_loss:1.87361, training_acc:0.00000,test_loss:2.17972,test_acc:0.41533
+epoch:007,lr:0.1000,training_loss:1.78334, training_acc:0.00000,test_loss:2.21886,test_acc:0.41417
+epoch:008,lr:0.1000,training_loss:1.71089, training_acc:0.00000,test_loss:2.14211,test_acc:0.41950
+epoch:009,lr:0.1000,training_loss:1.64257, training_acc:0.00000,test_loss:2.03656,test_acc:0.45333
+epoch:010,lr:0.1000,training_loss:1.59152, training_acc:0.00000,test_loss:1.92149,test_acc:0.48217
+epoch:011,lr:0.1000,training_loss:1.55537, training_acc:0.00000,test_loss:2.07620,test_acc:0.44817
+epoch:012,lr:0.1000,training_loss:1.51945, training_acc:0.00000,test_loss:1.99887,test_acc:0.46050
+epoch:013,lr:0.1000,training_loss:1.49232, training_acc:0.00000,test_loss:1.80840,test_acc:0.49667
+epoch:014,lr:0.1000,training_loss:1.45636, training_acc:0.00000,test_loss:2.12627,test_acc:0.44383
+epoch:015,lr:0.1000,training_loss:1.43744, training_acc:0.00000,test_loss:2.00793,test_acc:0.47000
+epoch:016,lr:0.1000,training_loss:1.41146, training_acc:0.00000,test_loss:1.67609,test_acc:0.54917
+epoch:017,lr:0.1000,training_loss:1.39953, training_acc:0.00000,test_loss:1.64671,test_acc:0.54300
+epoch:018,lr:0.1000,training_loss:1.38456, training_acc:0.00000,test_loss:2.02102,test_acc:0.46850
+epoch:019,lr:0.1000,training_loss:1.36458, training_acc:0.00000,test_loss:1.68463,test_acc:0.54183
+epoch:020,lr:0.1000,training_loss:1.36289, training_acc:0.00000,test_loss:1.73702,test_acc:0.52683
+epoch:021,lr:0.1000,training_loss:1.34655, training_acc:0.00000,test_loss:1.70504,test_acc:0.53717
+epoch:022,lr:0.1000,training_loss:1.34203, training_acc:0.00000,test_loss:1.69872,test_acc:0.52367
+epoch:023,lr:0.1000,training_loss:1.32651, training_acc:0.00000,test_loss:1.73057,test_acc:0.53017
+epoch:024,lr:0.1000,training_loss:1.31379, training_acc:0.00000,test_loss:1.94544,test_acc:0.49483
+epoch:025,lr:0.1000,training_loss:1.30541, training_acc:0.00000,test_loss:1.62190,test_acc:0.56167
+epoch:026,lr:0.1000,training_loss:1.31351, training_acc:0.00000,test_loss:1.79969,test_acc:0.50333
+epoch:027,lr:0.1000,training_loss:1.29653, training_acc:0.00000,test_loss:1.69925,test_acc:0.54400
+epoch:028,lr:0.1000,training_loss:1.29591, training_acc:0.00000,test_loss:1.63940,test_acc:0.55417
+epoch:029,lr:0.1000,training_loss:1.27620, training_acc:0.00000,test_loss:1.50906,test_acc:0.58367
+epoch:030,lr:0.1000,training_loss:1.28031, training_acc:0.00000,test_loss:1.63548,test_acc:0.55300
+epoch:031,lr:0.1000,training_loss:1.27556, training_acc:0.00000,test_loss:1.61825,test_acc:0.55833
+epoch:032,lr:0.1000,training_loss:1.25972, training_acc:0.00000,test_loss:1.60016,test_acc:0.56317
+epoch:033,lr:0.1000,training_loss:1.26743, training_acc:0.00000,test_loss:1.41907,test_acc:0.61233
+epoch:034,lr:0.1000,training_loss:1.25392, training_acc:0.00000,test_loss:1.44354,test_acc:0.60133
+epoch:035,lr:0.1000,training_loss:1.26726, training_acc:0.00000,test_loss:1.63193,test_acc:0.54800
+epoch:036,lr:0.1000,training_loss:1.25176, training_acc:0.00000,test_loss:1.72948,test_acc:0.53967
+epoch:037,lr:0.1000,training_loss:1.25842, training_acc:0.00000,test_loss:1.52035,test_acc:0.57350
+epoch:038,lr:0.1000,training_loss:1.24331, training_acc:0.00000,test_loss:1.50926,test_acc:0.58467
+epoch:039,lr:0.1000,training_loss:1.23710, training_acc:0.00000,test_loss:1.85279,test_acc:0.50133
+epoch:040,lr:0.0100,training_loss:0.86090, training_acc:0.00000,test_loss:0.83882,test_acc:0.77033
+epoch:041,lr:0.0100,training_loss:0.74033, training_acc:0.00000,test_loss:0.80061,test_acc:0.77567
+epoch:042,lr:0.0100,training_loss:0.69426, training_acc:0.00000,test_loss:0.76220,test_acc:0.79233
+epoch:043,lr:0.0100,training_loss:0.66129, training_acc:0.00000,test_loss:0.75655,test_acc:0.78950
+epoch:044,lr:0.0100,training_loss:0.63916, training_acc:0.00000,test_loss:0.74905,test_acc:0.78883
+epoch:045,lr:0.0100,training_loss:0.62258, training_acc:0.00000,test_loss:0.72721,test_acc:0.79717
+epoch:046,lr:0.0100,training_loss:0.60146, training_acc:0.00000,test_loss:0.73951,test_acc:0.79467
+epoch:047,lr:0.0100,training_loss:0.59251, training_acc:0.00000,test_loss:0.71921,test_acc:0.79583
+epoch:048,lr:0.0100,training_loss:0.57423, training_acc:0.00000,test_loss:0.70214,test_acc:0.80467
+epoch:049,lr:0.0100,training_loss:0.56685, training_acc:0.00000,test_loss:0.71325,test_acc:0.79833
+epoch:050,lr:0.0100,training_loss:0.56468, training_acc:0.00000,test_loss:0.71398,test_acc:0.80050
+epoch:051,lr:0.0100,training_loss:0.55190, training_acc:0.00000,test_loss:0.74090,test_acc:0.79133
+epoch:052,lr:0.0100,training_loss:0.54156, training_acc:0.00000,test_loss:0.71381,test_acc:0.80517
+epoch:053,lr:0.0100,training_loss:0.54060, training_acc:0.00000,test_loss:0.73199,test_acc:0.79383
+epoch:054,lr:0.0100,training_loss:0.53417, training_acc:0.00000,test_loss:0.71993,test_acc:0.79733
+epoch:055,lr:0.0100,training_loss:0.51912, training_acc:0.00000,test_loss:0.72433,test_acc:0.79650
+epoch:056,lr:0.0100,training_loss:0.52471, training_acc:0.00000,test_loss:0.74572,test_acc:0.79267
+epoch:057,lr:0.0100,training_loss:0.52964, training_acc:0.00000,test_loss:0.73740,test_acc:0.79067
+epoch:058,lr:0.0100,training_loss:0.51319, training_acc:0.00000,test_loss:0.73594,test_acc:0.79467
+epoch:059,lr:0.0100,training_loss:0.52093, training_acc:0.00000,test_loss:0.76862,test_acc:0.78683
+epoch:060,lr:0.0100,training_loss:0.51848, training_acc:0.00000,test_loss:0.73942,test_acc:0.79267
+epoch:061,lr:0.0100,training_loss:0.51110, training_acc:0.00000,test_loss:0.71918,test_acc:0.79533
+epoch:062,lr:0.0100,training_loss:0.50831, training_acc:0.00000,test_loss:0.77667,test_acc:0.78267
+epoch:063,lr:0.0100,training_loss:0.51430, training_acc:0.00000,test_loss:0.74607,test_acc:0.79400
+epoch:064,lr:0.0100,training_loss:0.50775, training_acc:0.00000,test_loss:0.76447,test_acc:0.78533
+epoch:065,lr:0.0100,training_loss:0.50971, training_acc:0.00000,test_loss:0.74778,test_acc:0.79133
+epoch:066,lr:0.0100,training_loss:0.52041, training_acc:0.00000,test_loss:0.71950,test_acc:0.79617
+epoch:067,lr:0.0100,training_loss:0.51314, training_acc:0.00000,test_loss:0.75175,test_acc:0.79000
+epoch:068,lr:0.0100,training_loss:0.50251, training_acc:0.00000,test_loss:0.77175,test_acc:0.78783
+epoch:069,lr:0.0100,training_loss:0.50785, training_acc:0.00000,test_loss:0.74840,test_acc:0.79317
+epoch:070,lr:0.0010,training_loss:0.41492, training_acc:0.00000,test_loss:0.61046,test_acc:0.83067
+epoch:071,lr:0.0010,training_loss:0.37870, training_acc:0.00000,test_loss:0.59762,test_acc:0.83467
+epoch:072,lr:0.0010,training_loss:0.35719, training_acc:0.00000,test_loss:0.58955,test_acc:0.83517
+epoch:073,lr:0.0010,training_loss:0.34430, training_acc:0.00000,test_loss:0.58646,test_acc:0.83683
+epoch:074,lr:0.0010,training_loss:0.33474, training_acc:0.00000,test_loss:0.58902,test_acc:0.83683
+epoch:075,lr:0.0010,training_loss:0.33758, training_acc:0.00000,test_loss:0.58309,test_acc:0.83833
+epoch:076,lr:0.0010,training_loss:0.32843, training_acc:0.00000,test_loss:0.58366,test_acc:0.83767
+epoch:077,lr:0.0010,training_loss:0.32873, training_acc:0.00000,test_loss:0.58303,test_acc:0.83700
+epoch:078,lr:0.0010,training_loss:0.32422, training_acc:0.00000,test_loss:0.58363,test_acc:0.83850
+epoch:079,lr:0.0010,training_loss:0.31671, training_acc:0.00000,test_loss:0.57458,test_acc:0.84150
+epoch:080,lr:0.0010,training_loss:0.32274, training_acc:0.00000,test_loss:0.58241,test_acc:0.84050
+epoch:081,lr:0.0010,training_loss:0.31512, training_acc:0.00000,test_loss:0.57743,test_acc:0.83767
+epoch:082,lr:0.0010,training_loss:0.30477, training_acc:0.00000,test_loss:0.57747,test_acc:0.83900
+epoch:083,lr:0.0010,training_loss:0.30220, training_acc:0.00000,test_loss:0.57518,test_acc:0.84233
+epoch:084,lr:0.0010,training_loss:0.30477, training_acc:0.00000,test_loss:0.57989,test_acc:0.83983
+epoch:085,lr:0.0010,training_loss:0.30460, training_acc:0.00000,test_loss:0.57540,test_acc:0.84067
+epoch:086,lr:0.0010,training_loss:0.30282, training_acc:0.00000,test_loss:0.57394,test_acc:0.84017
+epoch:087,lr:0.0010,training_loss:0.30010, training_acc:0.00000,test_loss:0.57309,test_acc:0.84183
+epoch:088,lr:0.0010,training_loss:0.29701, training_acc:0.00000,test_loss:0.56780,test_acc:0.84350
+epoch:089,lr:0.0010,training_loss:0.30142, training_acc:0.00000,test_loss:0.57220,test_acc:0.84317
+epoch:090,lr:0.0010,training_loss:0.29435, training_acc:0.00000,test_loss:0.57860,test_acc:0.84017
+epoch:091,lr:0.0010,training_loss:0.29333, training_acc:0.00000,test_loss:0.57687,test_acc:0.84050
+epoch:092,lr:0.0010,training_loss:0.29359, training_acc:0.00000,test_loss:0.57049,test_acc:0.84383
+epoch:093,lr:0.0010,training_loss:0.29021, training_acc:0.00000,test_loss:0.57199,test_acc:0.84150
+epoch:094,lr:0.0010,training_loss:0.28644, training_acc:0.00000,test_loss:0.57159,test_acc:0.84050
+epoch:095,lr:0.0010,training_loss:0.28384, training_acc:0.00000,test_loss:0.57598,test_acc:0.83733
+epoch:096,lr:0.0010,training_loss:0.28366, training_acc:0.00000,test_loss:0.56668,test_acc:0.84433
+epoch:097,lr:0.0010,training_loss:0.28653, training_acc:0.00000,test_loss:0.57040,test_acc:0.83900
+epoch:098,lr:0.0010,training_loss:0.27945, training_acc:0.00000,test_loss:0.56755,test_acc:0.84333
+epoch:099,lr:0.0010,training_loss:0.27904, training_acc:0.00000,test_loss:0.56660,test_acc:0.84183
+epoch:100,lr:0.0001,training_loss:0.27607, training_acc:0.00000,test_loss:0.56116,test_acc:0.84467
+epoch:101,lr:0.0001,training_loss:0.27800, training_acc:0.00000,test_loss:0.56121,test_acc:0.84533
+epoch:102,lr:0.0001,training_loss:0.27159, training_acc:0.00000,test_loss:0.56029,test_acc:0.84450
+epoch:103,lr:0.0001,training_loss:0.27354, training_acc:0.00000,test_loss:0.55999,test_acc:0.84317
+epoch:104,lr:0.0001,training_loss:0.27353, training_acc:0.00000,test_loss:0.55899,test_acc:0.84500
+epoch:105,lr:0.0001,training_loss:0.26787, training_acc:0.00000,test_loss:0.55702,test_acc:0.84383
+epoch:106,lr:0.0001,training_loss:0.26933, training_acc:0.00000,test_loss:0.55890,test_acc:0.84150
+epoch:107,lr:0.0001,training_loss:0.26995, training_acc:0.00000,test_loss:0.56137,test_acc:0.84367
+epoch:108,lr:0.0001,training_loss:0.26918, training_acc:0.00000,test_loss:0.56181,test_acc:0.84350
+epoch:109,lr:0.0001,training_loss:0.26950, training_acc:0.00000,test_loss:0.56122,test_acc:0.84333
+epoch:110,lr:0.0001,training_loss:0.26586, training_acc:0.00000,test_loss:0.55790,test_acc:0.84550
+epoch:111,lr:0.0001,training_loss:0.26825, training_acc:0.00000,test_loss:0.55715,test_acc:0.84467
+epoch:112,lr:0.0001,training_loss:0.26918, training_acc:0.00000,test_loss:0.56175,test_acc:0.84350
+epoch:113,lr:0.0001,training_loss:0.27062, training_acc:0.00000,test_loss:0.56011,test_acc:0.84517
+epoch:114,lr:0.0001,training_loss:0.26445, training_acc:0.00000,test_loss:0.56226,test_acc:0.84317
+epoch:115,lr:0.0001,training_loss:0.26464, training_acc:0.00000,test_loss:0.55824,test_acc:0.84467
+epoch:116,lr:0.0001,training_loss:0.26747, training_acc:0.00000,test_loss:0.55611,test_acc:0.84400
+epoch:117,lr:0.0001,training_loss:0.26714, training_acc:0.00000,test_loss:0.55517,test_acc:0.84483
+epoch:118,lr:0.0001,training_loss:0.25987, training_acc:0.00000,test_loss:0.55740,test_acc:0.84500
+epoch:119,lr:0.0001,training_loss:0.27146, training_acc:0.00000,test_loss:0.55816,test_acc:0.84650
+Session 0, Test Best Epoch 119,
+best test Acc 84.6500
+
+Session 1, test Acc 77.692
+
+Session 2, test Acc 73.314
+
+Session 3, test Acc 69.493
+
+Session 4, test Acc 67.025
+
+Session 5, test Acc 63.388
+
+Session 6, test Acc 60.378
+
+Session 7, test Acc 57.874
+
+Session 8, test Acc 56.590
+
+Base Session Best Epoch 119
+
+[84.65, 77.692, 73.314, 69.493, 67.025, 63.388, 60.378, 57.874, 56.59]

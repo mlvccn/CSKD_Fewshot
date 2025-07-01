@@ -1,0 +1,18 @@
+python train.py \
+    -project clip \
+    -dataset cub200 \
+    -base_mode ViT-B/16 \
+    -new_mode avg_dot \
+    -gamma 0.1 \
+    -lr_base 0.1 \
+    -lr_new 0.01 \
+    -decay 0.0005 \
+    -epochs_base 120 \
+    -schedule Milestone \
+    -milestones 30 70 100 \
+    -gpu 2,3 \
+    -temperature 16 \
+    -epochs_new 20 \
+    -debug \
+    -start_session 0 \
+    -batch_size_base 64

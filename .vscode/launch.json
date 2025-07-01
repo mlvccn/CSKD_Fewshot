@@ -1,0 +1,57 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: 当前文件",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "train.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+    
+            "args": [
+                "-project", "ours",
+                "-dataset", "mini_imagenet", 
+                "-base_mode", "distill-clip-RN18-cos1", 
+                "-clip_model_path", "/data/tianshaoqi24/cjj2/pretrain/mini_imageNet.pth",
+                "-model_dir", "/data/tianshaoqi24/cjj2/checkpoint/mini_imagenet/ours/distill-clip-RN18-cos-avg_cos-data_init-start_0/session0_max_acc.pth",
+                "-new_mode", "'avg_cos'", 
+                "-gamma", "0.1", 
+                "-lr_base", "0.1",
+                "-lr_new", "0.1",
+                "-decay", "0.0005",
+                "-epochs_base", "120",
+                "-schedule", "Milestone",
+                "-milestones", "40", "70", "100",
+                "-gpu", "2,3" ,
+                "-epochs_new", "10",
+                "-start_session", "0",
+                "-start_epoch","120",
+                "-temperature","16",
+                // "-incft","True",
+            ]
+            // "args": [
+            //     "-project", "ours-distill",
+            //     "-dataset", "mini_imagenet", 
+            //     "-base_mode", "distill-clip-RN18-cos", 
+            //     "-clip_model_path", "/data/tianshaoqi24/cjj2/pretrain/mini_imageNet.pth",
+            //     "-new_mode", "'avg_cos'", 
+            //     "-gamma", "0.1", 
+            //     "-lr_base", "0.1",
+            //     "-lr_new", "0.1",
+            //     "-decay", "0.0005",
+            //     "-epochs_base", "120",
+            //     "-schedule", "Milestone",
+            //     "-milestones", "40", "70", "100",
+            //     "-gpu", "2,3" ,
+            //     "-epochs_new", "10",
+            //     "-start_session", "0",
+            //     "-start_epoch","120",
+            //     "-temperature","16",
+            // ]
+        }
+    ]
+}
