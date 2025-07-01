@@ -78,8 +78,8 @@ The above figure shows the distribution of some test samples in the embedding sp
 
 ```
 @article{li-CSKD,
-  author    = {},
-  title     = {},
+  author    = {Ping Li and Jiajun Chen and Shaoqi Tian and Ran Wang},
+  title     = {Class Semantics guided Knowledge Distillation for Few-Shot Class Incremental Learning},
   journal   = {},
   volume    = {},
   pages     = {},
@@ -88,7 +88,7 @@ The above figure shows the distribution of some test samples in the embedding sp
 ```
 
 ## Contact
-If you have any questions, please feel free to contact Mr. jiajun Chen via email( [241050087@hdu.edu.cn](mailto:241050087@hdu.edu.cn).). 
+If you have any questions, please feel free to contact Mr. Jiajun Chen via email( [241050087@hdu.edu.cn](mailto:241050087@hdu.edu.cn).). 
 
 ## Acknowledgment
 
